@@ -38,7 +38,7 @@
 .generate-responsive-cols (@grid-width; @number-cols; @i: 1) when (@i <= @number-cols) {
   .col-@{i} {
     @single-col-width: ((@i / @number-cols) * 100);
-    width: @single-col-width;
+    width: unit(@single-col-width, ~"%");
   }
 
   .generate-responsive-cols(@grid-width; @number-cols; @i + 1);
